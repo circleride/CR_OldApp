@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap   = "http://phonegap.com/ns/1.0" id="com.circleride.app" version = "0.3" >
+<widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap   = "http://phonegap.com/ns/1.0" id="com.circleride.app" version = "0.2.1" >
 
 <name>CircleRide</name>
 <description>CircleRide es una red de usuarios, que están de acuerdo en participar con sus amigos en distintos eventos, como trayectos a la escuela, fines de semana, vacaciones, rolas escolares, viajes de trabajo, conciertos, eventos deportivos, entre muchos otros, a través de contactarse mediante este sistema, en donde se ofrecen y/o solicitan viajes privados o públicos, que coinciden con sus necesidades de búsqueda. Organizan y economizan tantas actividades como quieran, todo en compañía. Es divertido y seguro, aún más, ayudan a conservar el medio ambiente.</description>
@@ -42,7 +42,6 @@ CircleRide.Com
 
 <plugin name="cordova-plugin-battery-status" />
 <plugin name="cordova-plugin-camera" />
-<plugin name="cordova-plugin-media-capture" />
 <plugin name="cordova-plugin-console" />
 <plugin name="cordova-plugin-contacts" />
 <plugin name="cordova-plugin-device" />
@@ -61,6 +60,12 @@ CircleRide.Com
 <plugin name="cordova-plugin-vibration"/>
 <plugin name="cordova-plugin-android-permissions"/>
 <plugin name="cordova-plugin-imei"/>
+
+<plugin name="cordova-plugin-media-capture" source="npm" spec="*">
+  <variable name="CAMERA_USAGE_DESCRIPTION" value="Acceso a la cámara" />
+  <variable name="MICROPHONE_USAGE_DESCRIPTION" value="Acceso al micrófono" />
+  <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Acceso a la librería" />
+</plugin>
 
 <plugin name="cordova-plugin-geolocation">
 <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Posicionamiento en el Mapa" />
