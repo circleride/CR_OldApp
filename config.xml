@@ -41,7 +41,6 @@ CircleRide.Com
 <preference name="MediaPlaybackRequiresUserAction" value="false"/>
 
 <plugin name="cordova-plugin-battery-status" />
-<plugin name="cordova-plugin-camera" />
 <plugin name="cordova-plugin-console" />
 <plugin name="cordova-plugin-contacts" />
 <plugin name="cordova-plugin-device" />
@@ -61,7 +60,13 @@ CircleRide.Com
 <plugin name="cordova-plugin-android-permissions"/>
 <plugin name="cordova-plugin-imei"/>
 
-<plugin name="cordova-plugin-media-capture" source="npm" spec="*">
+<plugin name="cordova-plugin-camera">
+<variable name="CAMERA_USAGE_DESCRIPTION" value="Acceso a la cámara" />
+<variable name="MICROPHONE_USAGE_DESCRIPTION" value="Acceso al micrófono" />
+<variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Acceso a la librería" />
+</plugin>
+
+<plugin name="cordova-plugin-media-capture" source="npm">
   <variable name="CAMERA_USAGE_DESCRIPTION" value="Acceso a la cámara" />
   <variable name="MICROPHONE_USAGE_DESCRIPTION" value="Acceso al micrófono" />
   <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Acceso a la librería" />
@@ -179,6 +184,12 @@ CircleRide.Com
 <allow-intent href="market:*" />
 </platform>
 <platform name="ios">
+<config-file parent="NSPhotoLibraryUsageDescription" platform="ios" target="*-Info.plist">
+<string>Acceso a la librería</string>
+</config-file>
+<config-file parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
+<string>Acceso a la cámara</string>
+</config-file>
 <allow-intent href="itms:*" />
 <allow-intent href="itms-apps:*" />
 </platform>
