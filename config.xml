@@ -59,7 +59,7 @@ CircleRide.Com
 <plugin name="cordova-plugin-android-permissions"/>
 <plugin name="cordova-plugin-imei"/>
 
-<plugin name="cordova-plugin-file-transfer" spec="1.6.2" />
+<plugin name="cordova-plugin-file-transfer" spec="^1.6.2" />
 
 <plugin name="cordova-plugin-camera">
 <variable name="CAMERA_USAGE_DESCRIPTION" value="Acceso a la cámara" />
